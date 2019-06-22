@@ -95,9 +95,32 @@ Choose an option:
  
 
 0 removes it from tasklist, but 1 opens a new window:
-
- 
-
- 
-
 '''
+
+from colors import BodyColors as bc
+
+class menus():
+
+    def helpmenu(self):
+        try:
+            os.system("clear")
+            # Logo().banner()
+            print("\t[INFORMATION]::")
+            print("""
+This application is designed to build tasklists via terminal prompts.  I wanted
+a series of prompts to help ensure that the tasks were tractable and trackable.
+""")
+        except:
+            print("Welp... something went wrong.")
+
+    def intro_menu(self):
+        # Logo().banner()
+        print(" [{}!{}] {}Lookup menu:{}".format(bc.CYLW,bc.CEND,bc.CBLU, bc.CEND))
+        print('\t[{}1{}] {}Add Project{} - {}Search targets by email address{}'.format(bc.CBLU,bc.CEND,bc.CRED,bc.CEND,bc.CYLW,bc.CEND))
+        print('\t[{}2{}] {}Remove Project{} - {}Search targets by email address{}'.format(bc.CBLU,bc.CEND,bc.CRED,bc.CEND,bc.CYLW,bc.CEND))
+        print('\t[{}3{}] {}Build Tasklis{} - {}Search targets by email address{}'.format(bc.CBLU,bc.CEND,bc.CRED,bc.CEND,bc.CYLW,bc.CEND))
+        print('\t[{}4{}] {}Generate Weekly Report{} - {}Search targets by email address{}'.format(bc.CBLU,bc.CEND,bc.CRED,bc.CEND,bc.CYLW,bc.CEND))
+        print('\t[{}Q{}] {}Quit{} - {}Search targets by email address{}'.format(bc.CBLU,bc.CEND,bc.CRED,bc.CEND,bc.CYLW,bc.CEND))
+
+ui = menus()
+ui.intro_menu()
